@@ -1,0 +1,234 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root {
+    /* Color */
+    --Grey_500: hsl(234, 12%, 34%);
+    --Grey_400: hsl(212, 6%, 44%);
+    --White: hsl(0, 0%, 100%);
+    --Red: hsl(0, 78%, 62%);
+    --Cyan: hsl(180, 62%, 55%);
+    --Orange: hsl(34, 97%, 64%);
+    --Blue: hsl(212, 86%, 64%);
+    /* Spacing */
+    --Spacing_60px: 60px;
+    --Spacing-500_40px: 40px;
+    --Spacing-400_32px: 32px;
+    --Spacing-300_24px: 24px;
+    --Spacing-200_16px: 16px;
+    --Spacing-100_8px: 8px;
+    --Letter_spacing_025: 0.25px;
+    --Letter_spacing_0: 0;
+    /* Font size */
+    --Font-size_root: 15px;
+    --Font-size_36px: 36px;
+    --Font-size_20px: 20px;
+    --Font-size_15px: 1em;
+    --Font-size_13px: 13px;
+    /* Line height */
+    --Line-Height_160: 160%;
+    --Line-Height_140: 140%;
+    --Line-Height_135: 135%;
+    /* Size */
+    --Width-card_314px: 314px;
+    --Width-card_350px: 350px;
+    --Height-card_250px: 250px;
+    --Width-icon: 64px;
+    --Height-icon: 64px;
+    --Width-Mobile_375px: 25em;
+    --Width-Tablet_768px: 768px;
+    --Width-Desktop_1440px: 1440px;
+    /* radius */
+    --Radius-card_8px: 8px;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+    font-style: normal;
+    font-size: var(--Font-size_root);
+    letter-spacing: var(--Letter_spacing_0);
+}
+
+.text-preset-1 {
+    font-weight: 600; /* semibold */
+    font-size: var(--Font-size_36px);
+    line-height: var(--Line-Height_140);
+    letter-spacing: var(--Letter_spacing_025);
+}
+
+.text-preset-2 {
+    font-weight: 200; /* extralight */
+    font-size: var(--Font-size_36px);
+    line-height: var(--Line-Height_140);
+    letter-spacing: var(--Letter_spacing_025);
+}
+
+.text-preset-3 {
+    font-weight: 600; /* semibold */
+    font-size: var(--Font-size_20px);
+    line-height: var(--Line-Height_135);
+}
+
+.text-preset-4 {
+    font-weight: 400; /* regular */
+    font-size: var(--Font-size_15px);
+    line-height: var(--Line-Height_140);
+}
+
+.text-preset-5 {
+    font-weight: 400; /* regular */
+    font-size: var(--Font-size_13px);
+    line-height: var(--Line-Height_160);
+}
+
+.color-Grey_500 {color: var(--Grey_500);}
+.color-Grey_400 {color: var(--Grey_400);}
+.color-White {color: var(--White);}
+.color-Red {color: var(--Red);}
+.color-Cyan {color: var(--Cyan);}
+.color-Orange {color: var(--Orange);}
+.color-Blue {color: var(--Blue);}
+
+body {
+    width: 100%;
+    min-width: 600px;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.container, .container-card, .container-header, .title-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.container {
+    max-width: 600px;
+    width: var(--Width-Mobile_375px);
+    height: fit-content;
+    font-size: 19.5px;
+    padding-top: var(--Spacing-500_40px);
+    height: fit-content; 
+    gap: var(--Spacing_60px);}
+
+.container-card {
+    width: 92%;
+    height: fit-content;
+    gap: var(--Spacing-400_32px);
+}
+
+.container-header {
+    width: 95%;
+    height: fit-content;
+}
+
+.title-wrapper {
+    width: 100%;
+    height: fit-content;
+}
+
+.title-wrapper .title {margin-bottom: var(--Spacing-200_16px);}
+
+.card {
+    width: var(--Width-card_314px);
+    height: var(--Height-card_250px);
+    padding: var(--Spacing-400_32px);
+    border-radius: 8px;
+}
+
+.show-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.shadow-card {box-shadow: 0 15px 15px #83A6D2;}
+
+.icon, .title {
+    width: 100%;
+    height: 100%;
+}
+
+.title {margin-bottom: var(--Spacing-400_32px);}
+
+.icon img {float: right;}
+
+.text-preset-1, .text-preset-2, .text-preset-4 {text-align: center;}
+
+.line-header-Cyan::before, .line-header-Red::before,
+.line-header-Orange::before, .line-header-Blue::before {
+    content: "*";
+    line-height: 30px;
+    width: inherit;
+    height: 8px;
+    position: relative;
+    left: 0;
+    top: -32px;
+    color: var(--White);
+    border-radius: 20px 20px 0 0 ;
+}
+.line-header-Cyan::before{background-color: var(--Cyan);}
+.line-header-Red::before{background-color: var(--Red);}
+.line-header-Orange::before{background-color: var(--Orange);}
+.line-header-Blue::before{background-color: var(--Blue);}
+
+@media screen and (min-width: 786px) {
+    .container {
+        width: var(--Width-Tablet_768px);
+        height: fit-content;
+        font-size: 15px;
+        padding-top: var(--Spacing-500_40px);
+        height: fit-content; 
+        gap: var(--Spacing_60px);
+    }
+
+    #Supervisor {grid-column: 1 / span 2; justify-self: center;}
+    #Team-Builder {grid-column: 1 / 1;}
+    #Karma {grid-column: 2 / 2;}
+    #Calculator {grid-column: 1 / span 2; justify-self: center;}
+
+    .container-card {
+        width: fit-content;
+        height: fit-content;
+        display: grid;
+        gap: var(--Spacing-400_32px);
+        grid-template-columns: auto;
+    }
+}
+
+@media screen and (min-width: 1440px) {
+    .container {
+        width: var(--Width-Desktop_1440px);
+        height: fit-content;
+        font-size: 15px;
+        padding-top: var(--Spacing-500_40px);
+        height: fit-content; 
+        gap: var(--Spacing_60px);
+    }
+
+    .card {
+        width: var(--Width-card_350px);
+        height: var(--Height-card_250px);
+    }
+
+    .container-card {
+        width: fit-content;
+        height: fit-content;
+        display: grid;
+        gap: var(--Spacing-400_32px);
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+    }
+
+    #Supervisor {grid-column: 1 / 1; grid-row: 1/ span 2; align-self: center; justify-self: end;}
+    #Team-Builder {grid-column: 2 / 2; justify-self: center;}
+    #Karma {grid-column: 2 / 2; justify-self: center;}
+    #Calculator {grid-column: 3 / 3; grid-row: 1/ span 2; align-self: center; justify-self: start;}
+}
